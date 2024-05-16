@@ -20,17 +20,14 @@ int main(){
 
 				err = execlp("wc" , "wc" , NULL);
 				 if(err < 0){
-				 		perror("execlp() failed");
+				 		perror("exec() failed");
 						_exit(1);
 
 					}
 				}
-					else{
-							
+					else	
 						waitpid(-1 , &s , 0);
 						printf("parent completed!");
-
-					}
 
 					return 0;
 		}			
